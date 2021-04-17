@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Descripción (Parte II)
+Uno de los alumnos no conoce lo que es el polimorfismo y crea registros en la basededatos haciendo operaciones del estilo...
 
-Things you may want to cover:
+(ver desafio)
 
-* Ruby version
+Respuestas:
 
-* System dependencies
+1) Paso a paso para mejorar implementación:
 
-* Configuration
+1.1 Crear un nuevo proyecto de rails del tipo: 
+        rails new animals
+1.2 Crear los diferentes modelos descritos en el problema: anial, dog, cat y cow
+        rails g model Animal 
+        rails g model Dog 
+        rails g model Cat 
+        rails g model Cow
+1.3  Definir un metodo para cada modelo como:
 
-* Database creation
+    Para la clase animal
 
-* Database initialization
+    class Animal < ApplicationController
+        def new_method
+            puts 'Metodo de la clase Animal'
+        end
+    end
 
-* How to run the test suite
+    Para los diferentes animales:
 
-* Services (job queues, cache servers, search engines, etc.)
+    class Dog < Animal
+        def new_method
+            puts 'Metodo de la clase Dog que hereda de Animal'
+        end
+    end
 
-* Deployment instructions
 
-* ...
+
